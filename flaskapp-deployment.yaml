@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapp
+  labels:
+    app.kubernetes.io/part-of: exemplo  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapp
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      imagePullSecrets:
+        - name: robot-pull-secret-exemplo 
+      containers:
+        - name: flaskapp
+          image: quay.apps.hub.corp.banrisul.com.br/b40175/exemplo:1.0.30
+          ports:
+            - containerPort: 8080
