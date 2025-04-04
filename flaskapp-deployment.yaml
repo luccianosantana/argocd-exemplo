@@ -14,8 +14,6 @@ spec:
       labels:
         app: flaskapp
     spec:
-      imagePullSecrets:
-        - name: robot-pull-secret-exemplo 
       containers:
         - name: flaskapp
           image: exemplo:1.0.30
