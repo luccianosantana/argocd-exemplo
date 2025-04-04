@@ -18,6 +18,6 @@ spec:
         - name: robot-pull-secret-exemplo 
       containers:
         - name: flaskapp
-          image: quay.apps.hub.corp.banrisul.com.br/b40175/exemplo:1.0.30
+          image: exemplo:1.0.30
           ports:
             - containerPort: 8080
